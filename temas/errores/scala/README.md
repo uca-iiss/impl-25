@@ -62,6 +62,7 @@ docker exec scala-jenkins-1 cat /var/jenkins_home/secrets/initialAdminPassword
     - En “Definition” selecciona **Pipeline script from SCM**
     - En “SCM” elige **Git**
     - En “Repository URL” introduce la URL de tu repositorio
+    - Poner rama `main`
     - En Jenkinsfile, poner `temas/errores/scala/errores.scala-RITCHIE.Jenkinsfile`
     - Haz clic en **Save**.
 
