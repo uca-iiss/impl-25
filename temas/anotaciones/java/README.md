@@ -111,6 +111,7 @@ Maven:
     - En “Definition” selecciona **Pipeline script from SCM**
     - En “SCM” elige **Git**
     - En “Repository URL” introduce la URL de tu repositorio
+    - Poner rama `main`
     - En Jenkinsfile, poner `temas/anotaciones/java/anotaciones.java-RITCHIE.Jenkinsfile`
     - Haz clic en **Save**.
 
