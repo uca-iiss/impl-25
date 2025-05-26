@@ -93,6 +93,7 @@ docker exec csharp-jenkins-dotnet-1 cat /var/jenkins_home/secrets/initialAdminPa
     - En “Definition” selecciona **Pipeline script from SCM**
     - En “SCM” elige **Git**
     - En “Repository URL” introduce la URL de tu repositorio
+    - Poner rama `main`
     - En Jenkinsfile, poner `temas/abstraccion/csharp/abstraccion.csharp-RITCHIE.Jenkinsfile`
     - Haz clic en **Save**.
 
