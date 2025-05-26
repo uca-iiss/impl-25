@@ -168,7 +168,7 @@ Contiene la configuración del pipeline de integración continua (CI) usando Jen
 ## Despliegue
 Se requiere descargar la imagen necesaria para llevar a cabo el despliegue:
 ````bash
-docker build -t myjenkins-nodejsTS .
+docker build -t myjenkins-nodejsts .
 ````
 
 Para realizar el despliegue, se debe ejecutar el siguiente script. Este creará los recursos necesarios en Docker y ejecutará los comandos correspondientes de Terraform:
