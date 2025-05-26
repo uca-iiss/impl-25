@@ -16,13 +16,11 @@ Implementa operaciones matemáticas básicas:
 - `multiplicacion(a, b)`
 - `division(a, b)` — Lanza una excepción si `b == 0`
 
-### 2. Aspectos (Spring Python)
-Implementados como interceptores (`MethodInterceptor`) usando Spring Python 1.3.0.RC1:
-- `LogAspect`: Muestra logs antes y después de cada llamada (sintaxis Python 2.7)
-- `ErrorHandlingAspect`: Captura y registra excepciones
-- `TimingAspect`: Mide el tiempo de ejecución
-
-> **Nota importante**: Esta implementación requiere Python 2.7 para funcionar correctamente con Spring Python.
+### 2. AspectosCalculadora
+Contiene aspectos reutilizables definidos con `@aspectlib.Aspect`:
+- `log_antes_despues`: Muestra logs antes y después de cada llamada
+- `manejo_errores`: Captura y registra excepciones
+- `tiempo_ejecucion`: Mide el tiempo que tarda cada operación
 
 ### 3. aplicar_aspectos()
 Función que aplica todos los aspectos a los métodos de `Calculadora` de forma automática.
@@ -39,9 +37,6 @@ Las pruebas verifican:
 Las pruebas **no dependen de los aspectos**, por lo que se ejecutan directamente sobre la clase `Calculadora`.
 
 ### Despliegue de Pruebas
-
-> [!NOTE]
-> La totalidad de estas pruebas se han realizado en PowerShell.
 
 #### 1. Iniciar los contenedores ####
 ```bash
@@ -72,7 +67,6 @@ docker exec python-jenkins-python-1 cat /var/jenkins_home/secrets/initialAdminPa
     - En “Definition” selecciona **Pipeline script from SCM**
     - En “SCM” elige **Git**
     - En “Repository URL” introduce la URL de tu repositorio
-    - Poner rama `main`
     - En Jenkinsfile, poner `temas/aspectos/python/aspectos.python-RITCHIE.Jenkinsfile`
     - Haz clic en **Save**.
 
