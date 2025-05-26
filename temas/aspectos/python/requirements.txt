@@ -1,2 +1,2 @@
-springpython>=2.0.0
+pytilities==3.0.0
 pytest==7.1.2
