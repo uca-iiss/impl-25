@@ -1,9 +1,7 @@
-from springpython.aop import ProxyFactory
-from springpython.aop import MethodInterceptor
+from springpython.aop import ProxyFactory, MethodInterceptor
 import logging
 import time
 
-# Configuración básica de logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -12,7 +10,7 @@ class LogAspect(MethodInterceptor):
         logger.info("Antes de ejecutar: %s, args=%s", 
                    invocation.method.__name__, invocation.args)
         result = invocation.proceed()
-        logger.info("Después de ejecutar: %s", invocation.method.__name__)
+        logger.info("Despues de ejecutar: %s", invocation.method.__name__)
         return result
 
 class ErrorHandlingAspect(MethodInterceptor):

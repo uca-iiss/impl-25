@@ -14,9 +14,8 @@ pipeline {
         stage('Instalar Dependencias') {
             steps {
                 sh '''
-                    python3 -m venv venv
+                    virtualenv --python=python2.7 venv
                     . venv/bin/activate
-                    pip install --upgrade pip
                     pip install -r temas/aspectos/python/requirements.txt
                 '''
             }
