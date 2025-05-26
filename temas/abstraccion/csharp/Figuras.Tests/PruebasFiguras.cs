@@ -46,7 +46,7 @@ namespace Figuras.Tests
             Assert.Equal(Triangulo.TipoTriangulo.Escaleno, escaleno.Tipo);
 
             // Verificar cálculos de área
-            MostrarComparacion("6.50", equilatero.CalcularArea().ToString("0.00"));
+            MostrarComparacion("10.82", equilatero.CalcularArea().ToString("0.00"));
             Assert.Equal(10.82, equilatero.CalcularArea(), 2);
 
             MostrarComparacion("16.98", isosceles.CalcularArea().ToString("0.00"));
