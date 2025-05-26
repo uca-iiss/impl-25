@@ -9,6 +9,9 @@ namespace Figuras
         // Método obligatorio para calcular el área
         double CalcularArea();  
 
+        // Método obligatorio para calcular el perímetro
+        double CalcularPerimetro();  
+
         // Método obligatorio para obtener una descripción
         string ObtenerDescripcion();  
     }

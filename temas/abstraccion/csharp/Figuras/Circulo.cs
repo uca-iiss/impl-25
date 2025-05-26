@@ -1,33 +1,30 @@
-using System;
-
 namespace Figuras
 {
-    /// Implementación de un Círculo que cumple con IFigura.
-    public class Circulo : IFigura
+    public class Circulo : FiguraBase
     {
-        // Propiedad inmutable (solo se asigna en el constructor)
-        public string Nombre { get; init; } = "Círculo";  
+        // Nombre de la figura
+        public override string Nombre { get; protected set; } = "Circulo";
+        // Radio del círculo
+        public double Radio { get; private set; }
 
-        // Propiedad privada con get público (encapsulamiento)
-        public double Radio { get; private set; }  
-
-        // Constructor
+        // Constructor que valida y asigna el radio
         public Circulo(double radio)
         {
-            if (radio <= 0)
-                throw new ArgumentException("El radio debe ser mayor que cero.");
-            
+            ValidarDimension(radio, "Radio");
             Radio = radio;
         }
 
-        // Implementación de CalcularArea() para la clase Círculo
-        public double CalcularArea() => Math.PI * Radio * Radio;  
-
-        // Implementación de ObtenerDescripcion() para la clase Círculo
-        public string ObtenerDescripcion(){
-            var formatoDecimal = CalcularArea().ToString("0.00", System.Globalization.CultureInfo.InvariantCulture);
-            return $"Soy un {Nombre} con radio {Radio} y área {formatoDecimal}.";
+        // Calcula el área del círculo
+        public override double CalcularArea() => Math.PI * Radio * Radio;
+        
+        // Calcula la circunferencia (perímetro) del círculo
+        public override double CalcularPerimetro() => 2 * Math.PI * Radio;
+        
+        // Devuelve una descripción del círculo
+        public override string ObtenerDescripcion()
+        {
+            return $"Soy un {Nombre} con radio {Radio}, " +
+                   $"area {CalcularArea():0.00} y circunferencia {CalcularPerimetro():0.00}.";
         }
-
     }
 }
