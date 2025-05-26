@@ -16,11 +16,11 @@ Implementa operaciones matemáticas básicas:
 - `multiplicacion(a, b)`
 - `division(a, b)` — Lanza una excepción si `b == 0`
 
-### 2. AspectosCalculadora
-Contiene aspectos reutilizables definidos con `@aspectlib.Aspect`:
-- `log_antes_despues`: Muestra logs antes y después de cada llamada
-- `manejo_errores`: Captura y registra excepciones
-- `tiempo_ejecucion`: Mide el tiempo que tarda cada operación
+### 2. Aspectos (Spring Python)
+Implementados como interceptores (`MethodInterceptor`):
+- `LogAspect`: Muestra logs antes y después de cada llamada
+- `ErrorHandlingAspect`: Captura y registra excepciones
+- `TimingAspect`: Mide el tiempo que tarda cada operación
 
 ### 3. aplicar_aspectos()
 Función que aplica todos los aspectos a los métodos de `Calculadora` de forma automática.
@@ -37,6 +37,9 @@ Las pruebas verifican:
 Las pruebas **no dependen de los aspectos**, por lo que se ejecutan directamente sobre la clase `Calculadora`.
 
 ### Despliegue de Pruebas
+
+> [!NOTE]
+> La totalidad de estas pruebas se han realizado en PowerShell.
 
 #### 1. Iniciar los contenedores ####
 ```bash
