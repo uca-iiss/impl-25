@@ -67,6 +67,9 @@ Ejemplo de pruebas realizadas:
 
 ## Despliegue para pruebas
 
+> [!NOTE]
+> La totalidad de estas pruebas se han realizado en PowerShell.
+
 ### 1. Iniciar los contenedores
 
 Desde la carpeta `temas/anotaciones/java`
