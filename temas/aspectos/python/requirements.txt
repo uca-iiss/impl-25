@@ -1,2 +1,2 @@
-aspectlib==0.6.0
+springpython==1.3.0.RC1
 pytest==7.1.2
