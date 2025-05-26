@@ -17,10 +17,12 @@ Implementa operaciones matemáticas básicas:
 - `division(a, b)` — Lanza una excepción si `b == 0`
 
 ### 2. Aspectos (Spring Python)
-Implementados como interceptores (`MethodInterceptor`):
-- `LogAspect`: Muestra logs antes y después de cada llamada
+Implementados como interceptores (`MethodInterceptor`) usando Spring Python 1.3.0.RC1:
+- `LogAspect`: Muestra logs antes y después de cada llamada (sintaxis Python 2.7)
 - `ErrorHandlingAspect`: Captura y registra excepciones
-- `TimingAspect`: Mide el tiempo que tarda cada operación
+- `TimingAspect`: Mide el tiempo de ejecución
+
+> **Nota importante**: Esta implementación requiere Python 2.7 para funcionar correctamente con Spring Python.
 
 ### 3. aplicar_aspectos()
 Función que aplica todos los aspectos a los métodos de `Calculadora` de forma automática.
