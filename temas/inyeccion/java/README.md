@@ -265,7 +265,7 @@ Se ha usado `JUnit 5` y `AssertJ`.
 ## Implantación
 ---
 
-- Para realizar los **test** y comprobar que se levanta la app en`http://localhost:8080`:
+- Para realizar los **test** y comprobar que se levanta la app en`http://localhost:8080/fotos`:
     1. En GitHub, ve a la sección **Actions**
     2. Selecciona en la barra lateral izquierda: `inyeccion.java-RITCHIE`
     3. Dale a **run workflow** y selecciona el botón verde donde pone **run workflow**
@@ -275,7 +275,7 @@ Se ha usado `JUnit 5` y `AssertJ`.
 docker build -t redsocial-app .
 docker run -p 8080:8080 redsocial-app
 ```
-Al acceder a `http://localhost:8080` debería aparecer las fotos publicadas.
+Al acceder a `http://localhost:8080/fotos` debería aparecer las fotos publicadas.
 
 - Para borrarlo (limpieza) haz `Ctrl+C` en la terminal y ejecuta:
 ```bash

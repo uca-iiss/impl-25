@@ -237,6 +237,8 @@ Contiene pruebas unitarias básicas con `package:test` que verifican getters y s
 
 ## Implantación
 
+Para **ejecutar el programa** y **realizar los test** haz lo siguiente:
+
 1. Clona el repositorio si no lo has hecho antes
 
 2. Pon los siguientes comandos estando en el directorio `herencia/dart`:
