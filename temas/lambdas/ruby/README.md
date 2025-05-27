@@ -246,6 +246,8 @@ que es un framework de pruebas incluido por defecto en Ruby.
 
 ## Implantación
 
+Para **ejecutar el programa** y **realizar los test** haz lo siguiente: 
+
 1. Clona el repositorio si no lo has hecho antes
 
 2. Pon los siguientes comandos estando en el directorio `lambdas/ruby`:

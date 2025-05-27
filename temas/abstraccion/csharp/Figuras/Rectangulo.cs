@@ -1,34 +1,35 @@
-using System;
-
 namespace Figuras
 {
-    /// Implementación de un Rectángulo que cumple con IFigura.
-    public class Rectangulo : IFigura
+    public class Rectangulo : FiguraBase
     {
-        // Propiedad inmutable (solo se asigna en el constructor)
-        public string Nombre { get; init; } = "Rectángulo";  
+        // Nombre de la figura
+        public override string Nombre { get; protected set; } = "Rectangulo";
+        // Ancho del rectángulo
+        public double Ancho { get; private set; }
+        // Alto del rectángulo
+        public double Alto { get; private set; }
 
-        // Propiedades con setters privados (encapsulamiento)
-        public double Ancho { get; private set; }  
-        public double Alto { get; private set; }  
-
-        // Constructor
+        // Constructor que valida y asigna las dimensiones
         public Rectangulo(double ancho, double alto)
         {
-            if (ancho <= 0 || alto <= 0)
-                throw new ArgumentException("Las dimensiones deben ser mayores que cero.");
+            ValidarDimension(ancho, "Ancho");
+            ValidarDimension(alto, "Alto");
             
             Ancho = ancho;
             Alto = alto;
         }
 
-        // Implementación de CalcularArea() para la clase Rectángulo
-        public double CalcularArea() => Ancho * Alto;  
-
-        // Implementación de ObtenerDescripcion() para la clase Rectángulo
-        public string ObtenerDescripcion(){
-            var formatoDecimal = CalcularArea().ToString("0.00", System.Globalization.CultureInfo.InvariantCulture);
-            return $"Soy un {Nombre} de {Ancho} x {Alto} y área {formatoDecimal}.";
+        // Calcula el área del rectángulo
+        public override double CalcularArea() => Ancho * Alto;
+        
+        // Calcula el perímetro del rectángulo
+        public override double CalcularPerimetro() => 2 * (Ancho + Alto);
+        
+        // Devuelve una descripción del rectángulo
+        public override string ObtenerDescripcion()
+        {
+            return $"Soy un {Nombre} de {Ancho} x {Alto}, " + 
+                   $"area {CalcularArea():0.00} y perimetro {CalcularPerimetro():0.00}.";
         }
     }
 }

@@ -1,0 +1,42 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "temas", "temas", "{E8ED49F9-1289-64D9-5612-3092C569E276}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "abstraccion", "abstraccion", "{ECC4475E-9AF6-C3F0-D85C-352F3BE1050C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{0EE34E86-2742-1B8A-E75C-5003FFAED312}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figuras", "temas\abstraccion\csharp\Figuras\Figuras.csproj", "{03BEA0E5-1F32-4674-2280-B14D83BC6B23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figuras.Tests", "temas\abstraccion\csharp\Figuras.Tests\Figuras.Tests.csproj", "{27B41184-C7B1-66AD-FBE0-A1BDF223DA73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03BEA0E5-1F32-4674-2280-B14D83BC6B23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03BEA0E5-1F32-4674-2280-B14D83BC6B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03BEA0E5-1F32-4674-2280-B14D83BC6B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03BEA0E5-1F32-4674-2280-B14D83BC6B23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27B41184-C7B1-66AD-FBE0-A1BDF223DA73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B41184-C7B1-66AD-FBE0-A1BDF223DA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27B41184-C7B1-66AD-FBE0-A1BDF223DA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B41184-C7B1-66AD-FBE0-A1BDF223DA73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ECC4475E-9AF6-C3F0-D85C-352F3BE1050C} = {E8ED49F9-1289-64D9-5612-3092C569E276}
+		{0EE34E86-2742-1B8A-E75C-5003FFAED312} = {ECC4475E-9AF6-C3F0-D85C-352F3BE1050C}
+		{03BEA0E5-1F32-4674-2280-B14D83BC6B23} = {0EE34E86-2742-1B8A-E75C-5003FFAED312}
+		{27B41184-C7B1-66AD-FBE0-A1BDF223DA73} = {0EE34E86-2742-1B8A-E75C-5003FFAED312}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E40C2F6-8D06-48D0-B2F8-F984A2C84624}
+	EndGlobalSection
+EndGlobal

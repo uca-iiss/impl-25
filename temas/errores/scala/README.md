@@ -27,6 +27,9 @@ El sistema permite:
   
 ### Despliegue para pruebas
 
+> [!NOTE]
+> La totalidad de estas pruebas se han realizado en PowerShell.
+
 #### 1. Iniciar los contenedores ####
 
 Desde la carpeta temas/errores/scala
@@ -59,6 +62,7 @@ docker exec scala-jenkins-1 cat /var/jenkins_home/secrets/initialAdminPassword
     - En “Definition” selecciona **Pipeline script from SCM**
     - En “SCM” elige **Git**
     - En “Repository URL” introduce la URL de tu repositorio
+    - Poner rama `main`
     - En Jenkinsfile, poner `temas/errores/scala/errores.scala-RITCHIE.Jenkinsfile`
     - Haz clic en **Save**.
 
@@ -69,5 +73,5 @@ docker exec scala-jenkins-1 cat /var/jenkins_home/secrets/initialAdminPassword
 docker stop scala-jenkins-1
 docker rm scala-jenkins-1
 docker volume rm scala_jenkins_data
-docker rmi scala-jenkin
+docker rmi scala-jenkins
 ```

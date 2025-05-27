@@ -67,6 +67,9 @@ Ejemplo de pruebas realizadas:
 
 ## Despliegue para pruebas
 
+> [!NOTE]
+> La totalidad de estas pruebas se han realizado en PowerShell.
+
 ### 1. Iniciar los contenedores
 
 Desde la carpeta `temas/anotaciones/java`
@@ -108,6 +111,7 @@ Maven:
     - En “Definition” selecciona **Pipeline script from SCM**
     - En “SCM” elige **Git**
     - En “Repository URL” introduce la URL de tu repositorio
+    - Poner rama `main`
     - En Jenkinsfile, poner `temas/anotaciones/java/anotaciones.java-RITCHIE.Jenkinsfile`
     - Haz clic en **Save**.
 
