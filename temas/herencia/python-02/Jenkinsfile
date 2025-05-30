@@ -1,5 +1,4 @@
 pipeline {
-<<<<<<< HEAD
     agent any
 
     stages {
@@ -11,7 +10,7 @@ pipeline {
 
         stage('Construir imagen Docker') {
             steps {
-                dir('temas/herencia/python-01') {
+                dir('temas/herencia/python-02') {
                     script {
                         sh 'docker build -t herencia-python .'
                     }
@@ -24,33 +23,12 @@ pipeline {
                 script {
                     sh 'docker run --rm herencia-python'
                 }
-=======
-    agent {
-        docker{
-            image 'python:3.9-slim'
-        }
-
-    }
-        
-    stages {
-        stage('Preparar entorno') {
-            steps {
-                sh 'python3 -m venv venv'
-                sh './venv/bin/pip install --upgrade pip'
-            }
-        }
-
-        stage('Ejecutar pruebas') {
-            steps {
-                sh './venv/bin/python temas/herencia/python/test.py'
->>>>>>> upstream/main
             }
         }
     }
 
     post {
         always {
-<<<<<<< HEAD
             echo 'Pipeline completado.'
         }
         success {
@@ -58,9 +36,6 @@ pipeline {
         }
         failure {
             echo 'Fallo en alguna etapa. Revisa los logs.'
-=======
-            echo 'Pipeline finalizado.'
->>>>>>> upstream/main
         }
     }
 }
